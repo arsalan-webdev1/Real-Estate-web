@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESTATELY — Curated Luxury Real Estate &amp; Modern Homes</title>
+  <meta name="description" content="Discover exceptional homes, luxury villas and distinctive properties with ESTATELY. Explore transparent pricing, side-by-side comparison, and direct inquiries.">
+  <meta name="theme-color" content="#0b111b">
+
+  <!-- Open Graph & Social Sharing -->
+  <meta property="og:site_name" content="ESTATELY">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ESTATELY — Curated Luxury Real Estate &amp; Modern Homes">
+  <meta property="og:description" content="Discover exceptional homes, luxury villas and distinctive properties with ESTATELY. Explore transparent pricing, side-by-side comparison, and direct inquiries.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ESTATELY — Curated Luxury Real Estate &amp; Modern Homes">
+  <meta name="twitter:description" content="Discover exceptional homes, luxury villas and distinctive properties with ESTATELY.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Performance & Resource Hints -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314372B'/%3E%3Cpath d='M9 25V15a7 7 0 0 1 14 0v10' fill='none' stroke='%23D8C697' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Instrument+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data: RealEstateAgent & WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "RealEstateAgent",
+        "@id": "https://estately.example/#agency",
+        "name": "ESTATELY",
+        "description": "Discover thoughtfully selected properties, exceptional homes, and luxury spaces.",
+        "url": "https://estately.example/",
+        "telephone": "+1-555-010-0142",
+        "email": "hello@estately.example",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 Sample Street",
+          "addressLocality": "Demo City",
+          "addressCountry": "US"
+        },
+        "priceRange": "$$$$"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://estately.example/#website",
+        "url": "https://estately.example/",
+        "name": "ESTATELY",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://estately.example/#listings?location={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#home" aria-label="ESTATELY, back to top">
+        <svg class="wordmark-mark" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 21V11a7.5 7.5 0 0 1 15 0v10"/><path d="M9 21v-6.5a3 3 0 0 1 6 0V21"/></svg>
+        <span>ESTATELY</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#home" data-section="home">Home</a></li>
+          <li><a href="#listings" data-browse data-status="sale" data-nav-status="sale">Buy</a></li>
+          <li><a href="#listings" data-browse data-status="rent" data-nav-status="rent">Rent</a></li>
+          <li><a href="#services" data-section="services">Our Services</a></li>
+          <li><a href="#about" data-section="about">About</a></li>
+          <li><a href="#contact" data-section="contact">Contact</a></li>
+          <li class="nav-cta-item"><a class="btn btn--gold" href="#contact" data-list-property>List Your Property</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn" id="fav-nav-btn" data-action="show-favorites" aria-label="View favorites, none saved yet">
+          <span data-icon="heart"></span>
+          <span class="count-badge" id="fav-count" hidden>0</span>
+        </button>
+        <a class="btn btn--primary btn--sm header-cta" href="#contact" data-list-property>List Your Property</a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span>FIND A PLACE</span></span>
+          <span class="line"><span>TO CALL YOUR OWN.</span></span>
+        </h1>
+
+        <div class="hero-lower">
+          <div class="hero-copy">
+            <p class="hero-lead">Discover thoughtfully selected properties, exceptional homes, and spaces that fit your next chapter.</p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#listings" data-browse>Explore Properties</a>
+              <a class="btn btn--ghost" href="#contact" data-list-property>List Your Property</a>
+            </div>
+
+            <div class="hero-metrics" aria-label="Key brand metrics">
+              <div class="metric-pill">
+                <strong>1,200+</strong>
+                <span>Curated homes</span>
+              </div>
+              <div class="metric-pill">
+                <strong>48</strong>
+                <span>Prime districts</span>
+              </div>
+              <div class="metric-pill">
+                <strong>4.8/5</strong>
+                <span>Average satisfaction</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-photo has-img">
+              <img class="fx-img"
+                   src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+                   srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=640&q=75 640w,
+                           https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1080&q=80 1080w,
+                           https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80 1600w,
+                           https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80 1800w"
+                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 800px"
+                   alt="Contemporary house with warm interior lighting and a swimming pool at dusk"
+                   width="1800" height="1000"
+                   fetchpriority="high"
+                   decoding="async">
+            </div>
+            <div class="hero-inset has-img">
+              <img class="fx-img"
+                   src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=75"
+                   srcset="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=350&q=75 350w,
+                           https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=75 700w"
+                   sizes="(max-width: 768px) 160px, 240px"
+                   alt="Bright modern living room with tall windows"
+                   width="700" height="880"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="search-panel" id="hero-search" role="search" aria-label="Search properties" novalidate>
+        <div class="field">
+          <label for="h-location">Location</label>
+          <input id="h-location" name="location" type="search" list="location-list" placeholder="City, state or neighborhood" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="h-type">Property type</label>
+          <select id="h-type" name="type"></select>
+        </div>
+        <div class="field">
+          <label for="h-min">Minimum budget</label>
+          <select id="h-min" name="min"></select>
+        </div>
+        <div class="field">
+          <label for="h-max">Maximum budget</label>
+          <select id="h-max" name="max"></select>
+        </div>
+        <button class="search-submit" type="submit"><span data-icon="search"></span><span>Search</span></button>
+        <datalist id="location-list"></datalist>
+      </form>
+      <p class="search-note">Sample listings for a portfolio demo. Rental budgets are monthly, purchase budgets are total price.</p>
+    </section>
+
+    <!-- ============ LISTINGS ============ -->
+    <section class="section listings" id="listings" aria-labelledby="listings-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title" id="listings-title">Properties available now</h2>
+          <p class="section-intro">Ten sample listings to explore. Combine any filters, save favorites with the heart, and tick Compare on up to three properties to see them side by side.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="chip-rows">
+            <div class="chips" role="group" aria-label="Listing filters">
+              <button type="button" class="chip" data-chip="status" data-value="all" aria-pressed="true">All Properties</button>
+              <button type="button" class="chip" data-chip="status" data-value="sale" aria-pressed="false">For Sale</button>
+              <button type="button" class="chip" data-chip="status" data-value="rent" aria-pressed="false">For Rent</button>
+              <button type="button" class="chip chip--fav" id="chip-fav" aria-pressed="false">
+                <span data-icon="heart" data-size="16"></span>Favorites <span class="chip-count" id="fav-chip-count">0</span>
+              </button>
+            </div>
+            <div class="chips" role="group" aria-label="Property type">
+              <button type="button" class="chip" data-chip="type" data-value="all" aria-pressed="true">All types</button>
+              <button type="button" class="chip" data-chip="type" data-value="house" aria-pressed="false">Houses</button>
+              <button type="button" class="chip" data-chip="type" data-value="apartment" aria-pressed="false">Apartments</button>
+              <button type="button" class="chip" data-chip="type" data-value="villa" aria-pressed="false">Villas</button>
+              <button type="button" class="chip" data-chip="type" data-value="penthouse" aria-pressed="false">Penthouses</button>
+              <button type="button" class="chip" data-chip="type" data-value="investment" aria-pressed="false">Investments</button>
+            </div>
+          </div>
+
+          <div class="filter-bar">
+            <div class="field field--search">
+              <label for="f-location">Search by location</label>
+              <input id="f-location" type="search" list="location-list" placeholder="Try Denver, Texas or Silver Lake" autocomplete="off">
+            </div>
+            <button type="button" class="filters-toggle" id="filter-toggle" aria-expanded="false" aria-controls="filter-extra">
+              <span data-icon="sliders" data-size="18"></span>Filters
+            </button>
+            <div class="filter-extra" id="filter-extra">
+              <div class="field">
+                <label for="f-min">Minimum price</label>
+                <select id="f-min"></select>
+              </div>
+              <div class="field">
+                <label for="f-max">Maximum price</label>
+                <select id="f-max"></select>
+              </div>
+              <div class="field field--sort">
+                <label for="f-sort">Sort by</label>
+                <select id="f-sort">
+                  <option value="recommended">Recommended</option>
+                  <option value="price-asc">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                  <option value="newest">Newest listings</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-bar">
+          <p id="result-count" role="status" aria-live="polite"></p>
+          <button type="button" class="link-btn" id="reset-filters" hidden>Reset filters</button>
+        </div>
+
+        <div class="property-grid" id="property-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" data-icon="search" data-size="28"></span>
+          <h3 id="empty-title">No properties match these filters</h3>
+          <p id="empty-text"></p>
+          <button type="button" class="btn btn--primary" id="empty-reset">Reset filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROPERTY ============ -->
+    <section class="section featured" id="featured" aria-labelledby="featured-title">
+      <div class="container featured-grid" id="featured-root"></div>
+    </section>
+
+    <!-- ============ WHY ESTATELY ============ -->
+    <section class="section why" id="about" aria-labelledby="why-title">
+      <div class="container why-grid">
+        <div class="why-intro">
+          <h2 class="section-title reveal" id="why-title">Property search that respects your time.</h2>
+          <p class="section-intro reveal">ESTATELY is a fictional platform built to show how property discovery can feel calm: fewer, better listings, clear numbers and no pressure.</p>
+          <figure class="why-photo has-img reveal">
+            <img class="fx-img"
+                 src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=75"
+                 srcset="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=480&q=75 480w,
+                         https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=75 800w,
+                         https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=75 1100w"
+                 sizes="(max-width: 959px) 100vw, 42vw"
+                 alt="Sunlit living room with a sofa and large windows"
+                 width="1000" height="1250"
+                 loading="lazy"
+                 decoding="async">
+          </figure>
+          <dl class="why-stats">
+            <div><dt>Homes reviewed</dt><dd>1,200+</dd></div>
+            <div><dt>Neighborhoods</dt><dd>48</dd></div>
+            <div><dt>Average rating</dt><dd>4.8</dd></div>
+          </dl>
+          <p class="fine-print">Illustrative figures for a fictional portfolio brand. They do not describe a real company.</p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar reveal">
+            <span class="pillar-icon" data-icon="shield" data-size="26"></span>
+            <h3>Carefully selected properties</h3>
+            <p>Each listing is chosen for design quality, location and value, so you spend less time scrolling and more time looking at homes worth visiting.</p>
+          </article>
+          <article class="pillar reveal" style="--d:.08s">
+            <span class="pillar-icon" data-icon="eye" data-size="26"></span>
+            <h3>Transparent property information</h3>
+            <p>Price, size, rooms and amenities sit side by side on every listing. What you read on the card is what you find in the details.</p>
+          </article>
+          <article class="pillar reveal" style="--d:.16s">
+            <span class="pillar-icon" data-icon="user" data-size="26"></span>
+            <h3>Personalized property discovery</h3>
+            <p>Combine location, budget and property type, then save the homes you love. Your shortlist stays on your device between visits.</p>
+          </article>
+          <article class="pillar reveal" style="--d:.24s">
+            <span class="pillar-icon" data-icon="message" data-size="26"></span>
+            <h3>Convenient inquiry experience</h3>
+            <p>Ask about a property in one step. The inquiry form already knows which home you were viewing, so you only write your question.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how on-dark" id="services" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head section-head--stack reveal">
+          <h2 class="section-title" id="how-title">Three steps from curious to connected.</h2>
+          <p class="section-intro">Everything you need to go from browsing to asking a question happens on one page.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <span class="step-icon" data-icon="compass" data-size="24"></span>
+            <h3>Discover</h3>
+            <p>Explore properties and refine your search.</p>
+            <a class="step-link" href="#listings" data-browse>Browse properties</a>
+          </li>
+          <li class="step reveal" style="--d:.15s">
+            <span class="step-num" aria-hidden="true">02</span>
+            <span class="step-icon" data-icon="compare" data-size="24"></span>
+            <h3>Compare</h3>
+            <p>Review property details and compare your favorites.</p>
+            <a class="step-link" href="#listings" data-action="open-compare">Open comparison</a>
+          </li>
+          <li class="step reveal" style="--d:.3s">
+            <span class="step-num" aria-hidden="true">03</span>
+            <span class="step-icon" data-icon="message" data-size="24"></span>
+            <h3>Connect</h3>
+            <p>Submit an inquiry to express interest in a property.</p>
+            <a class="step-link" href="#contact">Send an inquiry</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / INQUIRY ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <h2 class="section-title reveal" id="contact-title">Ask about a property.</h2>
+          <p class="section-intro reveal">Choose a listing, tell us what you would like to know, and see how the inquiry flow works from start to finish.</p>
+          <div class="demo-notice reveal" role="note">
+            <span data-icon="info" data-size="20"></span>
+            <p><strong>Demo only.</strong> This form shows the inquiry flow. It does not send anything to a real estate agent, a server or any other person.</p>
+          </div>
+          <ul class="contact-list reveal">
+            <li><span data-icon="mail" data-size="18"></span><span>hello@estately.example</span></li>
+            <li><span data-icon="phone" data-size="18"></span><span>+1 (555) 010-0142</span></li>
+            <li><span data-icon="pin" data-size="18"></span><span>100 Sample Street, Demo City</span></li>
+          </ul>
+          <p class="fine-print">Fictional contact details for a portfolio project.</p>
+        </div>
+
+        <div class="form-panel reveal">
+          <form class="inquiry-form" id="inquiry-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="i-name">Full name</label>
+                <input id="i-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name" aria-invalid="false">
+                <p class="error-msg" id="err-name" hidden></p>
+              </div>
+              <div class="form-field">
+                <label for="i-email">Email address</label>
+                <input id="i-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="err-email" aria-invalid="false">
+                <p class="error-msg" id="err-email" hidden></p>
+              </div>
+              <div class="form-field">
+                <label for="i-phone">Phone number <span class="optional">(optional)</span></label>
+                <input id="i-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="err-phone" aria-invalid="false">
+                <p class="error-msg" id="err-phone" hidden></p>
+              </div>
+              <div class="form-field">
+                <label for="i-property">Interested property</label>
+                <select id="i-property" name="property" required aria-describedby="err-property" aria-invalid="false"></select>
+                <p class="error-msg" id="err-property" hidden></p>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="i-message">Inquiry message</label>
+                <textarea id="i-message" name="message" rows="5" required aria-describedby="err-message" aria-invalid="false" placeholder="For example: I would like to know about viewing times and the lease length."></textarea>
+                <p class="error-msg" id="err-message" hidden></p>
+              </div>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" id="form-submit">
+              <span class="btn-label">Submit inquiry</span>
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success" hidden tabindex="-1">
+            <span class="success-icon" data-icon="check" data-size="28"></span>
+            <h3>Inquiry flow complete</h3>
+            <p id="success-text"></p>
+            <button type="button" class="btn btn--ghost" id="success-reset">Send another inquiry</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="reviews" aria-labelledby="t-title">
+      <div class="container t-grid">
+        <div class="t-intro">
+          <h2 class="section-title reveal" id="t-title">What homeseekers might say.</h2>
+          <p class="section-intro reveal">Sample testimonials written for this demo. They are fictional and are not verified customer reviews.</p>
+          <div class="t-controls reveal">
+            <button type="button" class="round-btn" id="t-prev" aria-label="Previous testimonial"><span data-icon="chevron-left" data-size="20"></span></button>
+            <button type="button" class="round-btn" id="t-next" aria-label="Next testimonial"><span data-icon="chevron-right" data-size="20"></span></button>
+            <div class="t-dots" id="t-dots"></div>
+            <span class="sr-only" id="t-status" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="t-viewport reveal" id="t-region" role="region" aria-roledescription="carousel" aria-label="Sample testimonials">
+          <div class="t-track" id="t-track">
+            <figure class="t-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <div class="stars" role="img" aria-label="5 out of 5 stars" data-stars="5"></div>
+              <blockquote><p>We filtered by neighborhood and budget, saved three homes, and compared them side by side. By the weekend we knew exactly which one to ask about.</p></blockquote>
+              <figcaption><strong>Amara Okafor</strong><span>Family home search in Denver. Sample testimonial.</span></figcaption>
+            </figure>
+            <figure class="t-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <div class="stars" role="img" aria-label="5 out of 5 stars" data-stars="5"></div>
+              <blockquote><p>Every listing showed the monthly rent, the area and the amenities up front. Nothing was hidden behind a form, which made renting a loft feel straightforward.</p></blockquote>
+              <figcaption><strong>Daniel Whitmore</strong><span>Rental search in Brooklyn. Sample testimonial.</span></figcaption>
+            </figure>
+            <figure class="t-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <div class="stars" role="img" aria-label="4 out of 5 stars" data-stars="4"></div>
+              <blockquote><p>As an investor I wanted the numbers first. Seeing bedrooms, area and price for several properties in one view saved me an afternoon of spreadsheets.</p></blockquote>
+              <figcaption><strong>Priya Raman</strong><span>Investment property search in Nashville. Sample testimonial.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-panel on-dark">
+          <div class="cta-photo has-img" aria-hidden="true">
+            <img class="fx-img"
+                 src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=70"
+                 srcset="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=640&q=70 640w,
+                         https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=70 1200w,
+                         https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=70 1800w"
+                 sizes="100vw"
+                 alt=""
+                 width="1800" height="1000"
+                 loading="lazy"
+                 decoding="async">
+          </div>
+          <div class="cta-content reveal">
+            <h2 class="cta-title" id="cta-title">YOUR NEXT CHAPTER STARTS WITH THE RIGHT ADDRESS.</h2>
+            <p>Explore properties that bring your plans closer to home.</p>
+            <div class="cta-actions">
+              <a class="btn btn--gold" href="#listings" data-browse>Explore Properties</a>
+              <a class="btn btn--light" href="#contact">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer on-dark">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="wordmark wordmark--light" href="#home" aria-label="ESTATELY, back to top">
+          <svg class="wordmark-mark" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 21V11a7.5 7.5 0 0 1 15 0v10"/><path d="M9 21v-6.5a3 3 0 0 1 6 0V21"/></svg>
+          <span>ESTATELY</span>
+        </a>
+        <p>A modern property discovery platform for exploring homes, apartments and investment properties. Fictional brand, built as a frontend portfolio project.</p>
+        <ul class="social-list" aria-label="Social media">
+          <li><button type="button" class="social-btn" data-action="social" data-network="Instagram" aria-label="Instagram"><span data-icon="instagram" data-size="18"></span></button></li>
+          <li><button type="button" class="social-btn" data-action="social" data-network="Facebook" aria-label="Facebook"><span data-icon="facebook" data-size="18"></span></button></li>
+          <li><button type="button" class="social-btn" data-action="social" data-network="LinkedIn" aria-label="LinkedIn"><span data-icon="linkedin" data-size="18"></span></button></li>
+          <li><button type="button" class="social-btn" data-action="social" data-network="YouTube" aria-label="YouTube"><span data-icon="youtube" data-size="18"></span></button></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Properties">
+        <h2>Properties</h2>
+        <ul>
+          <li><a href="#listings" data-browse data-status="sale">Homes for sale</a></li>
+          <li><a href="#listings" data-browse data-status="rent">Homes for rent</a></li>
+          <li><a href="#featured">Featured property</a></li>
+          <li><a href="#listings" data-action="open-compare">Compare properties</a></li>
+          <li><a href="#listings" data-action="show-favorites">Saved favorites</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Company">
+        <h2>Company</h2>
+        <ul>
+          <li><a href="#about">About ESTATELY</a></li>
+          <li><a href="#services">Our services</a></li>
+          <li><a href="#reviews">Sample testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" data-list-property>List your property</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <address>
+          hello@estately.example<br>
+          +1 (555) 010-0142<br>
+          100 Sample Street, Demo City<br>
+          Monday to Friday, 9:00 to 17:00
+        </address>
+        <p class="fine-print">Sample contact details. Photography via Unsplash.</p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>&copy; 2026 ESTATELY. A fictional brand created for a portfolio demonstration.</p>
+      <p>All listings, prices and testimonials are sample content. No live property data.</p>
+    </div>
+  </footer>
+
+  <!-- ============ PROPERTY DETAILS MODAL ============ -->
+  <div class="overlay" id="detail-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1">
+      <button type="button" class="modal-close" data-close aria-label="Close property details"><span data-icon="x" data-size="20"></span></button>
+      <div class="modal-scroll">
+        <div class="detail-media has-img" id="detail-media"></div>
+        <div class="detail-body" id="detail-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ COMPARISON MODAL ============ -->
+  <div class="overlay" id="compare-overlay" hidden>
+    <div class="modal modal--wide" role="dialog" aria-modal="true" aria-labelledby="compare-title" tabindex="-1">
+      <button type="button" class="modal-close" data-close aria-label="Close comparison"><span data-icon="x" data-size="20"></span></button>
+      <div class="modal-scroll modal-scroll--block">
+        <header class="compare-head">
+          <h2 id="compare-title">Compare properties</h2>
+          <p id="compare-sub"></p>
+        </header>
+        <div class="compare-wrap" id="compare-wrap" role="region" aria-label="Property comparison table, scrolls sideways on small screens" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ COMPARISON TRAY ============ -->
+  <aside class="compare-tray" id="compare-tray" aria-label="Property comparison selection">
+    <div class="tray-inner">
+      <ul class="tray-slots" id="tray-slots"></ul>
+      <p class="tray-text" id="tray-text" role="status" aria-live="polite"></p>
+      <div class="tray-actions">
+        <button type="button" class="btn btn--gold btn--sm" id="tray-open" disabled>Compare now</button>
+        <button type="button" class="tray-clear" id="tray-clear">Clear</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">ESTATELY needs JavaScript to show the property listings, filters and comparison tools.</p></noscript>
+</body>
+</html>
